@@ -49,7 +49,7 @@
 
           <!-- Datetime -->
           <td :key="`${log.index}-column-${colIndex}`" v-else-if="column.data_path === 'datetime'" class="whitespace-nowrap text-gray-900 dark:text-gray-200">
-            <span class="hidden lg:inline" v-html="highlightSearchResult(log.datetime, searchStore.query)"></span>
+            <span class="hidden lg:inline" v-html="highlightSearchResult(localTime(log.datetime), searchStore.query)"></span>
             <span class="lg:hidden">{{ log.time }}</span>
           </td>
           <!-- /Datetime -->
@@ -72,7 +72,7 @@
       <tr v-show="logViewerStore.isOpen(index)">
         <td :colspan="tableColumns">
           <div class="lg:hidden flex justify-between px-2 pt-2 pb-1 text-xs">
-            <div class="flex-1"><span class="font-semibold">Datetime:</span> {{ log.datetime }}</div>
+            <div class="flex-1"><span class="font-semibold">Datetime:</span> {{ localTime(log.datetime) }}</div>
             <div>
               <LogCopyButton :log="log" />
             </div>
