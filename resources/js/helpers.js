@@ -1,4 +1,12 @@
 import { ref } from 'vue';
+import {DateTime} from 'luxon';
+
+/**
+ * Show the date time in local time zone.
+ */
+localTime(dateTime) {
+  return DateTime.fromSQL(dateTime, {zone: 'UTC'}).toLocal().toFormat('yyyy-MM-dd HH:mm:ss'));
+},
 
 export const highlightSearchResult = (text, query = null) => {
   text = text || '';
