@@ -13,9 +13,11 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production",
-        "luxon": "^3.4.4"
+        "production": "mix --production"
     },
+    "dependencies": {        
+        "luxon": "^3.4.4"
+      },
     "devDependencies": {
         "@headlessui/vue": "^1.7.9",
         "@heroicons/vue": "^2.0.15",
@@ -34,7 +36,7 @@
         "vue": "^3.2.47",
         "vue-loader": "^17.0.1",
         "vue-router": "^4.1.6",
-        "vue-template-compiler": "^2.7.14",
+        "vue-template-compiler": "^2.7.14",        
         "@types/luxon": "^3.4.2",
     }
 }
